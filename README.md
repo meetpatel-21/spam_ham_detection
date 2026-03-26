@@ -1,2 +1,79 @@
 # spam_ham_detection
-SpamDetector is a production-ready Python class that implements a complete NLP-based spam detection system. the Key Features includes: Real-time single-email prediction with confidence scores ,Professional visualizations and logging ,Error handling and production styling  Built with scikit-learn, NLTK, pandas, matplotlib, and seaborn.
+## ✨ Overview
+A production-ready spam detection pipeline that processes SMS/email text data using advanced NLP preprocessing (stemming, stopword removal, n-grams) and trains a Random Forest classifier. Features comprehensive evaluation with confusion matrices, ROC curves, precision-recall charts, and single-email prediction capabilities.
+
+## Key Capabilities:
+- 99%+ accuracy on spam/ham classification
+- Professional visualizations for model evaluation
+- Real-time single email prediction
+- Scalable feature extraction (5000 features + bigrams)
+
+## 🚀 Features
+- Text Preprocessing: Lowercasing, punctuation removal, stemming, stopword filtering
+- Advanced Vectorization: Bag-of-words with unigrams + bigrams (5000 features)
+- Robust ML Model: Random Forest with hyper-optimized parameters
+- Comprehensive Evaluation:
+- Classification report (precision, recall, F1-score)
+- Confusion matrix heatmap
+- Precision-Recall bar charts
+- ROC curve with AUC score
+- Production Ready: Single email prediction with confidence scores
+- Interactive CLI: Command-line interface for testin
+
+## 🛠️ Technologies & Tools
+- Programming:	Python 3.8+
+- Data Processing:	pandas, numpy
+- NLP	NLTK (PorterStemmer, stopwords)
+- Machine Learning:	scikit-learn (RandomForest, metrics)
+- Feature Extraction:	CountVectorizer (ngrams)
+- Visualization:	matplotlib, seaborn
+- Development:	warnings filter
+
+## 📋 Standard CLI Input/Output
+### Basic Usage
+##### python spam_detector.py --data spam_ham_dataset.csv
+
+### Sample output
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/7403da25-b176-4c6e-a5c8-ddb22831526f" />
+
+## 🧪 Testing Instructions
+### 1. Prerequisites
+#### Clone repository
+##### git clone <your-repo-url>
+##### cd spam-detector
+
+### Create virtual environment
+##### python -m venv venv
+##### source venv/bin/activate  ##### Linux/Mac
+##### venv\Scripts\activate     #####Windows
+
+### Install dependencies
+##### pip install -r requirements.txt
+
+### 2. Download Dataset
+#### Get spam_ham_dataset.csv from:
+##### https://www.kaggle.com/datasets/uciml/sms-spam-collection-dataset
+##### Or use the provided sample dataset in /data/
+
+### 3. Quick Test
+#### Full pipeline test
+python spam_detector.py
+
+##### Single email prediction test
+python predict.py "Free entry in 2 a wkly comp to win FA Cup final tkts 21st May 2005"
+
+### 4. Expected Results
+
+✅ Test accuracy: >98%
+✅ ROC-AUC: >0.99
+✅ F1-Score (Spam): >0.90
+✅ All visualizations generated
+
+### 5. Custom Testing
+#### Test your own email
+python predict.py "Your test email text here"
+
+#### Expected output:
+##### {'prediction': 'spam', 'confidence': 0.95, 'probabilities': {'ham': 0.05, 'spam': 0.95}}
+
+
