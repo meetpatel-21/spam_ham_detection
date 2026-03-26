@@ -38,42 +38,53 @@ A production-ready spam detection pipeline that processes SMS/email text data us
 
 ## 🧪 Testing Instructions
 ### 1. Prerequisites
-#### Clone repository
-##### git clone <your-repo-url>
-##### cd spam-detector
+#### i) Clone repository
+- ##### git clone <your-repo-url>
+- ##### cd spam-detector
 
-### Create virtual environment
-##### python -m venv venv
-##### source venv/bin/activate  ##### Linux/Mac
-##### venv\Scripts\activate     #####Windows
+#### ii) Create virtual environment
+- ##### python -m venv venv
+- ##### source venv/bin/activate  ##### Linux/Mac
+- ##### venv\Scripts\activate     #####Windows
 
-### Install dependencies
-##### pip install -r requirements.txt
+ #### iii) Install dependencies
+- ##### pip install -r requirements.txt
 
 ### 2. Download Dataset
-#### Get spam_ham_dataset.csv from:
-##### https://www.kaggle.com/datasets/uciml/sms-spam-collection-dataset
-##### Or use the provided sample dataset in /data/
+- #### Get spam_ham_dataset.csv from:
+- ##### https://www.kaggle.com/datasets/uciml/sms-spam-collection-dataset
+- ##### Or use the provided sample dataset in /data/
 
 ### 3. Quick Test
-#### Full pipeline test
-python spam_detector.py
+#### i)Full pipeline test
+- python spam_detector.py
 
-##### Single email prediction test
-python predict.py "Free entry in 2 a wkly comp to win FA Cup final tkts 21st May 2005"
+#### ii)Single email prediction test
+- python predict.py "Free entry in 2 a wkly comp to win FA Cup final tkts 21st May 2005"
 
 ### 4. Expected Results
 
-✅ Test accuracy: >98%
-✅ ROC-AUC: >0.99
-✅ F1-Score (Spam): >0.90
-✅ All visualizations generated
+- ✅ Test accuracy: >98%
+- ✅ ROC-AUC: >0.99
+- ✅ F1-Score (Spam): >0.90
+- ✅ All visualizations generated
 
 ### 5. Custom Testing
-#### Test your own email
-python predict.py "Your test email text here"
+#### i)Test your own email
+- python predict.py "Your test email text here"
 
-#### Expected output:
-##### {'prediction': 'spam', 'confidence': 0.95, 'probabilities': {'ham': 0.05, 'spam': 0.95}}
+#### ii)Expected output:
+- ##### {'prediction': 'spam', 'confidence': 0.95, 'probabilities': {'ham': 0.05, 'spam': 0.95}}
+
+### 🔍 Demo Screenshots
+#### Confusion Matrix | ROC Curve | Precision-Recall
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/53ced339-8f62-4ee7-a90b-c5f6778cdbba" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/011f9b95-9a32-4163-a475-9fd957327d02" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/78d99b8b-b769-457c-ae4d-1d7cdccd3247" />
+
+
 
 
