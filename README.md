@@ -1,4 +1,4 @@
-# spam_ham_detection
+# Spam_Ham_Detection
 ## ✨ Overview
 A production-ready spam detection pipeline that processes SMS/email text data using advanced NLP preprocessing (stemming, stopword removal, n-grams) and trains a Random Forest classifier. Features comprehensive evaluation with confusion matrices, ROC curves, precision-recall charts, and single-email prediction capabilities.
 
